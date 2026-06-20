@@ -18,7 +18,7 @@ const PAGES = [
     id: 'letter-1',
     type: 'letter',
     content: {
-      heading: 'Para ti...',
+      heading: 'Para ti:',
       body: `${HER_NAME},
 Desde que llegaste a mi vida, algo cambió. No fue solamente tu sonrisa, tus ojos o tu forma de ser. Fue la manera en que empecé a sentir paz cuando estabas cerca.
 
