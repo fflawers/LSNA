@@ -1,0 +1,57 @@
+/* ===== DESIGN TOKENS ===== */
+:root {
+  --cream: #f5efe6;
+  --parchment: #e8dcc8;
+  --parchment-dark: #d4c4a8;
+  --ink: #3d2b1f;
+  --ink-light: #6b4a3a;
+  --sepia: #8b6347;
+  --red-dark: #8b1a1a;
+  --red-medium: #c0392b;
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --shadow-warm: rgba(61, 43, 31, 0.3);
+  --shadow-strong: rgba(61, 43, 31, 0.6);
+
+  --font-script: 'Dancing Script', cursive;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-body: 'Lora', Georgia, serif;
+}
+
+/* ===== RESET ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #1a0f0a;
+  background-image:
+    radial-gradient(ellipse at 20% 20%, rgba(139, 99, 71, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(139, 26, 26, 0.08) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  font-family: var(--font-body);
+  color: var(--ink);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #1a0f0a; }
+::-webkit-scrollbar-thumb { background: var(--sepia); border-radius: 3px; }
+
+/* ===== UTILITIES ===== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+}

@@ -1,0 +1,65 @@
+.music-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  background: rgba(61, 43, 31, 0.8);
+  border: 1px solid var(--gold);
+  border-radius: 50px;
+  padding: 8px 16px;
+  color: var(--gold-light);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.music-btn:hover {
+  background: rgba(201, 168, 76, 0.2);
+  transform: scale(1.05);
+}
+
+.music-icon {
+  font-size: 1rem;
+}
+
+.music-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 16px;
+}
+
+.music-bars span {
+  display: block;
+  width: 3px;
+  background: var(--gold-light);
+  border-radius: 2px;
+  animation: none;
+  height: 4px;
+  transition: height 0.2s;
+}
+
+.music-btn.playing .music-bars span:nth-child(1) {
+  animation: bar1 0.8s ease-in-out infinite alternate;
+}
+.music-btn.playing .music-bars span:nth-child(2) {
+  animation: bar2 0.9s ease-in-out infinite alternate;
+}
+.music-btn.playing .music-bars span:nth-child(3) {
+  animation: bar3 0.7s ease-in-out infinite alternate;
+}
+.music-btn.playing .music-bars span:nth-child(4) {
+  animation: bar4 1s ease-in-out infinite alternate;
+}
+
+@keyframes bar1 { from { height: 4px; } to { height: 14px; } }
+@keyframes bar2 { from { height: 8px; } to { height: 10px; } }
+@keyframes bar3 { from { height: 6px; } to { height: 16px; } }
+@keyframes bar4 { from { height: 10px; } to { height: 6px; } }
